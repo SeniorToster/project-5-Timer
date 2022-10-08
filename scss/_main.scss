@@ -1,0 +1,42 @@
+body {
+  background-color: $color-black-blue;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.timer-box {
+  background-color: #263859;
+}
+.timer-main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  position: absolute;
+}
+.segment {
+  fill: transparent;
+  stroke: url(#gradient);
+  stroke-width: 2px;
+  stroke-dasharray: 45 60;
+  stroke-linecap: round;
+  transform: scale(4.7);
+  transform-origin: center;
+  transition: stroke-dasharray 1s linear;
+}
+.circle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --size: 150px;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+}

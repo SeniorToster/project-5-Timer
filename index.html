@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="timer-box">
+        <div class="timer-unput">
+          <input type="number" class="timer-unput__number" />
+          <input type="number" class="timer-unput__number" />
+          <input type="number" class="timer-unput__number" />
+        </div>
+        <div class="timer-main">
+          <div class="timer-main__wrapper">
+            <div class="circle-wrap">
+              <svg class="circle" viewBox="0 0 100 100">
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2FB8FF"></stop>
+                  <stop offset="100%" stop-color="#9EECD9"></stop>
+                </linearGradient>
+                <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+              </svg>
+              <div class="timer-main__number">20</div>
+            </div>
+            <div class="timer-main__text">часов</div>
+          </div>
+          <div class="timer-main__wrapper">
+            <div class="circle-wrap">
+              <svg class="circle" viewBox="0 0 100 100">
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2FB8FF"></stop>
+                  <stop offset="100%" stop-color="#9EECD9"></stop>
+                </linearGradient>
+                <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+              </svg>
+              <div class="timer-main__number">20</div>
+            </div>
+            <div class="timer-main__text">минут</div>
+          </div>
+          <div class="timer-main__wrapper">
+            <div class="circle-wrap">
+              <svg class="circle" viewBox="0 0 100 100">
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2FB8FF"></stop>
+                  <stop offset="100%" stop-color="#9EECD9"></stop>
+                </linearGradient>
+                <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+              </svg>
+              <div class="timer-main__number">20</div>
+            </div>
+            <div class="timer-main__text">секунд</div>
+          </div>
+        </div>
+        <div class="timer-btn">
+          <div class="timer-btn__start">Старт</div>
+          <div class="timer-btn__stop">Стоп</div>
+          <div class="timer-btn__ reset">Сбросить</div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
