@@ -10,22 +10,63 @@ body {
   margin: 0 auto;
 }
 .timer-box {
-  background-color: #263859;
-}
-.timer-main {
   padding: 20px;
+  background-color: #263859;
+  border-radius: 30px;
+}
+.timer-unput {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
+  &__number {
+    background-color: $color-white;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    appearance: none;
+    outline: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.timer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    background-color: $color-black-blue;
+    border-radius: 100px 100px 50px 50px;
+    padding-bottom: 10px;
+  }
+  &__text {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: $color-white;
+  }
+  &__number {
+    font-size: 60px;
+    font-weight: 700;
+    color: $color-white;
+  }
 }
 
 .circle {
   position: absolute;
+  transform: scaleY(1) rotate(270deg);
 }
 .segment {
   fill: transparent;
   stroke: url(#gradient);
   stroke-width: 2px;
-  stroke-dasharray: 45 60;
+  stroke-dasharray: 1 60;
   stroke-linecap: round;
   transform: scale(4.7);
   transform-origin: center;
@@ -39,4 +80,26 @@ body {
   width: var(--size);
   height: var(--size);
   position: relative;
+  margin-bottom: 10px;
+}
+.timer-btn {
+  width: var(--size);
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: $color-orange;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      scale: 1.1;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }

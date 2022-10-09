@@ -17,9 +17,27 @@
     <div class="container">
       <div class="timer-box">
         <div class="timer-unput">
-          <input type="number" class="timer-unput__number" />
-          <input type="number" class="timer-unput__number" />
-          <input type="number" class="timer-unput__number" />
+          <input
+            max="24"
+            min="0"
+            type="number"
+            class="timer-unput__number"
+            placeholder="часов"
+          />
+          <input
+            max="60"
+            min="0"
+            type="number"
+            class="timer-unput__number"
+            placeholder="минут"
+          />
+          <input
+            max="60"
+            min="0"
+            type="number"
+            class="timer-unput__number"
+            placeholder="секунд"
+          />
         </div>
         <div class="timer-main">
           <div class="timer-main__wrapper">
@@ -63,9 +81,9 @@
           </div>
         </div>
         <div class="timer-btn">
-          <div class="timer-btn__start">Старт</div>
-          <div class="timer-btn__stop">Стоп</div>
-          <div class="timer-btn__ reset">Сбросить</div>
+          <div class="timer-btn__text">Старт</div>
+          <div class="timer-btn__text">Стоп</div>
+          <div class="timer-btn__text">Сбросить</div>
         </div>
       </div>
     </div>
