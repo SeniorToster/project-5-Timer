@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo List</title>
+    <title>Timer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,7 +49,7 @@
                 </linearGradient>
                 <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
               </svg>
-              <div class="timer-main__number">20</div>
+              <div class="timer-main__number" id="hr">00</div>
             </div>
             <div class="timer-main__text">часов</div>
           </div>
@@ -62,7 +62,7 @@
                 </linearGradient>
                 <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
               </svg>
-              <div class="timer-main__number">20</div>
+              <div class="timer-main__number" id="min">00</div>
             </div>
             <div class="timer-main__text">минут</div>
           </div>
@@ -75,15 +75,15 @@
                 </linearGradient>
                 <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
               </svg>
-              <div class="timer-main__number">20</div>
+              <div class="timer-main__number" id="sec">00</div>
             </div>
             <div class="timer-main__text">секунд</div>
           </div>
         </div>
         <div class="timer-btn">
-          <div class="timer-btn__text">Старт</div>
-          <div class="timer-btn__text">Стоп</div>
-          <div class="timer-btn__text">Сбросить</div>
+          <div class="timer-btn__text" id="start">Старт</div>
+          <div class="timer-btn__text" id="stop">Стоп</div>
+          <div class="timer-btn__text" id="reset">Сбросить</div>
         </div>
       </div>
     </div>
