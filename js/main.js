@@ -7,7 +7,13 @@ const sec = document.querySelector('#sec');
 const circleHr = hr.parentNode.querySelector('.segment');
 const circleMin = min.parentNode.querySelector('.segment');
 const circleSec = sec.parentNode.querySelector('.segment');
-const arrTime = [0, 0, 0];
+let arrTime = [0, 0, 0];
+console.log(arrTime);
+if (localStorage.time) {
+  arrTime = JSON.parse(localStorage.time);
+  time(arrTime);
+}
+console.log(arrTime);
 
 inputWrapper.addEventListener('input', e => {
   valueVerify(e);
@@ -27,6 +33,7 @@ buttons.addEventListener('click', e => {
     clearInterval(timeInterval);
     arrTime.fill(0);
     renderTimer(0, 0, 0);
+    localStorage.time = JSON.stringify(arrTime);
   }
 });
 
@@ -88,10 +95,12 @@ function time(arrNum) {
     h = Math.trunc((time / 60 / 60) % 60);
 
     arrTime.splice(0, 3, h, m, s);
+    localStorage.time = JSON.stringify(arrNum);
 
     renderTimer(h, m, s);
     if (time <= 0) {
       clearInterval(timeInterval);
+      alert('Время истекло!');
       return;
     }
     --time;
